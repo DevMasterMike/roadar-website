@@ -212,7 +212,12 @@ html.js .fade-up.is-visible { opacity: 1; transform: none; }
   font-size: 13px;
   color: var(--ink-2);
 }
-.nav-mid a { transition: color 0.15s ease; }
+.nav-mid a {
+  transition: color 0.15s ease;
+  display: inline-block;
+  padding: 12px 6px;       /* touch target; nav row absorbs the padding */
+  margin: -12px -6px;
+}
 .nav-mid a:hover { color: var(--ink); }
 
 .nav-cta {
@@ -284,6 +289,9 @@ html.js .fade-up.is-visible { opacity: 1; transform: none; }
   color: var(--amber);
   font-size: 17px;
   letter-spacing: -0.01em;
+  /* 44px-tall touch target without moving the layout */
+  padding: 10px 4px;
+  margin: -10px -4px;
 }
 
 /* ---------- Hero (home) ---------- */
@@ -824,7 +832,13 @@ html.js .fade-up.is-visible { opacity: 1; transform: none; }
   margin: 0 0 14px;
 }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.footer ul a { color: var(--ink-3); transition: color 0.15s ease; }
+.footer ul a {
+  color: var(--ink-3);
+  transition: color 0.15s ease;
+  display: inline-block;
+  padding: 8px 0;          /* comfortable touch target */
+  margin: -8px 0;
+}
 .footer ul a:hover { color: var(--ink); }
 .footer .blurb { color: var(--ink-3); font-size: 13px; max-width: 300px; line-height: 1.6; }
 .footer .copy {
