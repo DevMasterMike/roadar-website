@@ -193,6 +193,9 @@ html.js .fade-up.is-visible { opacity: 1; transform: none; }
   letter-spacing: -0.015em;
   font-size: 15px;
   color: var(--ink);
+  /* comfortable touch target inside the nav row */
+  padding: 10px 6px;
+  margin: -10px -6px;
 }
 
 .brand-mark {
