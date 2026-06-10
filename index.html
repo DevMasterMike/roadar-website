@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0D12">
+<meta name="description" content="Roadar. Real-time hazard alerts from the drivers ahead of you - police, accidents, hazards, and Flock cameras. Free, anonymous, ad-free. Built for iPhone.">
+<meta property="og:title" content="Roadar. Know what's ahead.">
+<meta property="og:description" content="Free, real-time hazard alerts from the drivers ahead of you.">
+<meta property="og:type" content="website">
+<title>Roadar. Know what's ahead.</title>
+
+<link rel="icon" type="image/png" href="images/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Roadar home">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="images/app-icon.png" alt="Roadar" class="brand-img">
+      </span>
+      <span class="brand-name">Roadar</span>
+    </a>
+    <ul class="nav-mid">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <a class="nav-cta" href="pricing.html">Get the app</a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Built for iPhone &middot; iOS 18 or later</p>
+    <h1>Know what's<br><span class="accent">ahead.</span></h1>
+    <p class="lead">Real-time hazard alerts from the drivers ahead of you. Slow down before you need to.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="pricing.html">Download free</a>
+      <a class="link-more" href="features.html">See the features</a>
+    </div>
+    <p class="hero-foot">Free. Anonymous. No ads. No tracking.</p>
+  </div>
+
+  <div class="hero-stage">
+    <figure class="shot-frame fade-up" style="margin: 0;">
+      <img src="images/shot-map.png" width="570" height="1240" alt="Roadar map with live police, accident, debris, and Flock-camera alerts and the REPORT button" fetchpriority="high">
+    </figure>
+  </div>
+</header>
+
+<hr class="hairline">
+
+<!-- ===== Numbers ===== -->
+<section class="tile-tight">
+  <div class="container">
+    <div class="stats fade-up">
+      <div class="stat">
+        <div class="value">0.5<span class="unit">mi</span></div>
+        <div class="label">Default alert radius. Tune it to your commute.</div>
+      </div>
+      <div class="stat">
+        <div class="value">6</div>
+        <div class="label">Report categories, from police to Flock cameras.</div>
+      </div>
+      <div class="stat">
+        <div class="value">1<span class="unit">tap</span></div>
+        <div class="label">To report. Five seconds to undo.</div>
+      </div>
+      <div class="stat">
+        <div class="value">$0</div>
+        <div class="label">No subscription, no ads, no in-app purchases.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== The takeover, live ===== -->
+<section class="tile tile-alt">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-copy fade-up">
+        <span class="kicker">Live from the road</span>
+        <h2>It speaks up<br><span class="dim">only when it matters.</span></h2>
+        <p>Calm map while the road is clear. As you speed up, Roadar quietly looks farther ahead.</p>
+        <p>Enforcement close on your route takes over the screen. Distance counts down live. It clears the moment you pass.</p>
+        <p class="dim" style="font-size: 15px;">Real screen recording. Simulated drive, real app.</p>
+        <a class="link-more" href="features.html">See how alerts work</a>
+      </div>
+      <div class="feature-visual fade-up">
+        <figure class="shot-frame" style="margin: 0;">
+          <video src="images/drive-loop.mp4" poster="images/drive-poster.jpg" width="602" height="1308" autoplay muted loop playsinline aria-label="Screen recording of Roadar during a drive: the map is calm, then a full-screen police alert appears and counts down from 0.4 miles to 400 feet"></video>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Report loop ===== -->
+<section class="tile">
+  <div class="container">
+    <div class="feature-row flip">
+      <div class="feature-copy fade-up">
+        <span class="kicker">The loop</span>
+        <h2>Reported ahead.<br><span class="dim">Confirmed on the spot.</span></h2>
+        <p>A driver ahead of you taps once. Drivers near the spot confirm it or clear it. You get one quiet heads-up as you approach. Not a feed to scroll.</p>
+        <p class="dim" style="font-size: 15px;">Confirmations extend a report's life. Disputes shorten it. Nothing stays on the map by default.</p>
+        <a class="link-more" href="features.html">How the loop works</a>
+      </div>
+      <div class="feature-visual fade-up">
+        <figure class="shot-frame" style="margin: 0;">
+          <img src="images/shot-report.png" width="570" height="1240" loading="lazy" alt="Roadar report sheet with police, accident, hazard, stalled, debris, and Flock-camera categories">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Anonymous reputation ===== -->
+<section class="tile tile-alt">
+  <div class="container">
+    <div class="feature-row">
+      <div class="feature-copy fade-up">
+        <span class="kicker">Trust</span>
+        <h2>A reputation.<br><span class="dim">Not a profile.</span></h2>
+        <p>Other drivers see what was reported. Never who reported it. Sign in with Apple, and your accuracy quietly earns one of three tiers: New, Trusted, Verified.</p>
+        <p class="dim" style="font-size: 15px;">No usernames. No followers. No leaderboard. Nothing to game.</p>
+        <a class="link-more" href="privacy.html">Read the Privacy Policy</a>
+      </div>
+      <div class="feature-visual fade-up">
+        <figure class="shot-frame" style="margin: 0;">
+          <img src="images/shot-profile.png" width="570" height="1240" loading="lazy" alt="Roadar profile showing an anonymous reputation tier and a weekly alerts summary">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Surfaces ===== -->
+<section class="tile">
+  <div class="container">
+    <div class="sec-head fade-up">
+      <span class="kicker">Surfaces</span>
+      <h2>Made for driving.<br><span class="dim">Not for staring at a screen.</span></h2>
+      <p>Set it up once. Then Roadar meets you on the surfaces you already use behind the wheel.</p>
+    </div>
+    <div class="spec-grid fade-up">
+      <div class="spec">
+        <div class="spec-name">Action Button</div>
+        <p>One press files your most-used report. Eyes stay on the road.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Dynamic Island</div>
+        <p>The distance to what's ahead ticks down live.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Lock Screen</div>
+        <p>Alerts persist as a Live Activity. No unlocking.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">CarPlay</div>
+        <p>Nearby reports on the dash. File one from the car screen.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Home Screen widget</div>
+        <p>Tap to report from your spot, without opening the app.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Control Center</div>
+        <p>A report control, one swipe away.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Siri Shortcuts</div>
+        <p>&ldquo;Report speed enforcement with Roadar.&rdquo; Hands on the wheel.</p>
+      </div>
+      <div class="spec">
+        <div class="spec-name">Sign in with Apple</div>
+        <p>No passwords, no email. One anonymous account.</p>
+      </div>
+    </div>
+
+    <figure class="di-figure fade-up">
+      <img src="images/di-strip.png" width="1140" height="284" loading="lazy" alt="The Dynamic Island during a real Roadar alert: a police icon on the left and 0.2 miles on the right">
+      <figcaption>The Dynamic Island during a real alert. Police ahead, 0.2 miles and counting.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== Privacy ===== -->
+<section class="tile tile-alt">
+  <div class="container">
+    <div class="sec-head fade-up">
+      <span class="kicker">Privacy</span>
+      <h2>Built to collect less.<br><span class="dim">Not more.</span></h2>
+    </div>
+    <div class="statement-list fade-up">
+      <div class="statement">
+        <h4>No ads</h4>
+        <p>Nothing in your driving feed, ever. There is no driving feed.</p>
+      </div>
+      <div class="statement">
+        <h4>No trackers</h4>
+        <p>No third-party analytics SDKs, no ad networks, no data brokers.</p>
+      </div>
+      <div class="statement">
+        <h4>No location history</h4>
+        <p>Your location is used to alert you. It is never stored as a trail of where you drive.</p>
+      </div>
+      <div class="statement">
+        <h4>No public profile</h4>
+        <p>The only thing other drivers ever see is the report itself.</p>
+      </div>
+    </div>
+    <p class="fade-up" style="margin-top: 36px;"><a class="link-more" href="privacy.html">Read the full Privacy Policy</a></p>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="tile">
+  <div class="cta-final fade-up">
+    <h2>A quiet heads-up,<br>before you need one.</h2>
+    <p>Free to download and use. No ads, no tracking, no account beyond Sign in with Apple.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="pricing.html">Download free</a>
+      <a class="link-more" href="features.html">See the features</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="images/app-icon.png" alt="Roadar" class="brand-img">
+        </span>
+        <span>Roadar</span>
+      </div>
+      <p class="blurb">Real-time hazard alerts from the drivers ahead of you. Built privacy-first. Free, no ads.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <ul>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="pricing.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:berinshteyn@gmail.com">berinshteyn@gmail.com</a></li>
+        <li><a href="mailto:berinshteyn@gmail.com">Report abuse</a></li>
+        <li><a href="mailto:berinshteyn@gmail.com">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    Do not interact with Roadar while driving. Obey all traffic laws and posted speed limits. Enforcement alerts exist to prompt you to slow down. Reports are user-generated and may be inaccurate or out of date. Do not rely on Roadar for your safety.<br><br>
+    &copy; 2026 Roadar. All rights reserved. Apple, iPhone, App Store, Apple ID, Sign in with Apple, Live Activity, and Dynamic Island are trademarks of Apple Inc. Roadar is not affiliated with Apple Inc.
+  </div>
+</footer>
+
+</body>
+</html>
