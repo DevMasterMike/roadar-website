@@ -1,0 +1,61 @@
+# Nightly US camera file for the Roadar app.
+#
+# Pulls every license-plate reader, speed camera and red-light camera in the US from OpenStreetMap
+# (tools/build_camera_dataset.py) and publishes it as the `cameras-v1.deflate` asset of the
+# `camera-data` release, which the app downloads once a day. The build refuses to publish a partial map,
+# so a bad night just leaves yesterday's file in place. camera-data.json records what was published
+# (and its daily commit keeps GitHub from pausing this schedule on a quiet repo).
+#
+# Data © OpenStreetMap contributors, ODbL.
+
+name: Camera data
+
+on:
+  schedule:
+    - cron: "17 7 * * *"   # 07:17 UTC, the middle of the night across the US
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: camera-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the camera file from OpenStreetMap
+        run: python3 tools/build_camera_dataset.py cameras-v1.deflate | tee build.log
+
+      - name: Publish it
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view camera-data >/dev/null 2>&1 || gh release create camera-data \
+            --title "Camera data" \
+            --notes "Nightly US camera file for the Roadar app, built from OpenStreetMap (© OpenStreetMap contributors, ODbL)."
+          gh release upload camera-data cameras-v1.deflate --clobber
+
+      - name: Record what was published
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json, os, re
+          log = open("build.log").read()
+          total = re.search(r"total (\d+) cameras \((\d+) ALPR\)", log)
+          data = open("cameras-v1.deflate", "rb").read()
+          json.dump({"file": "cameras-v1.deflate", "bytes": len(data),
+                     "sha256": hashlib.sha256(data).hexdigest(),
+                     "cameras": int(total.group(1)), "alpr": int(total.group(2)),
+                     "published": os.environ.get("GITHUB_RUN_ID")},
+                    open("camera-data.json", "w"), indent=2)
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add camera-data.json
+          git commit -m "Camera data: nightly update" || echo "nothing to commit"
+          git push
