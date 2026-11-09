@@ -1,8 +1,8 @@
 {
   "file": "cameras-v1.deflate",
-  "bytes": 2202758,
-  "sha256": "8aa1879a34015f73323f6e789faa90164837499c6ee4b74de3b8592ee79c57e6",
-  "cameras": 147962,
+  "bytes": 2202780,
+  "sha256": "06fd8de97c97f8b287b7cadd94fb42fd5143c98bd5e4de31479203ebc51180e2",
+  "cameras": 147963,
   "alpr": 145356,
-  "published": "42489082936"
+  "published": "42665172847"
 }
